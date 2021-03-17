@@ -1,0 +1,90 @@
+@mixin typeface-1($size) {
+  font-family: 'Sora', sans-serif;
+
+  @if $size == h1 {
+    font-size: calc(max(36px, 2.98vw));
+    font-size: clamp(36px, 5.2vw, 56px);
+    line-height: 100%;
+  } @else if $size == h2 {
+    font-size: clamp(36px, 4.4vw, 52px);
+    line-height: 100%;
+  } @else if $size == h3 {
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 120%;
+  } @else if $size == h4 {
+    font-size: clamp(18px, 2vw, 24px);
+    line-height: 130%;
+  } @else if $size == h5 {
+    font-size: clamp(16px, 1.8vw, 18px);
+    line-height: 145%;
+  }
+}
+
+@mixin typeface-2($size: p2) {
+  font-family: 'Source Sans Pro', sans-serif;
+
+  @if $size == p1 {
+    font-size: clamp(18px, 2vw, 24px);
+    line-height: 130%;
+  } @else if $size == p2 {
+    font-size: clamp(14px, 1.8vw, 16px);
+    line-height: 145%;
+  } @else if $size == p3 {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+
+h1 {
+  color: $black-normal;
+  @include typeface-1(h1);
+}
+
+h2 {
+  color: $black-dark;
+  @include typeface-1(h2);
+}
+
+h3 {
+  color: $black-dark;
+  @include typeface-1(h3);
+}
+
+h4 {
+  color: $black-dark;
+  @include typeface-1(h4);
+}
+
+h5 {
+  text-transform: uppercase;
+  background: linear-gradient(
+    220.94deg,
+    $secondary-normal 14.43%,
+    $primary-normal 85.28%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+  @include typeface-1(h5);
+}
+
+p {
+  color: $gray-3;
+  @include typeface-2(p2);
+}
+
+.bold {
+  font-weight: bold;
+  color: $black-light;
+}
+
+strong {
+  color: $black-dark;
+  @include typeface-2(p2);
+}
+
+.text-center {
+  text-align: center;
+}

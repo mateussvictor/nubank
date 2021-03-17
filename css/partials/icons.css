@@ -1,0 +1,24 @@
+.dropshadow {
+  -webkit-filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+          filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+}
+
+.bg-icon-check::after {
+  background-image: url("../../svg/icon-check.svg");
+  background-size: cover;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  width: 40px;
+  height: 40px;
+  left: 8px;
+  top: 16px;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+          filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+}
+
+.bg-icon-check:hover::after {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+/*# sourceMappingURL=icons.css.map */
