@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <script src="./js/svg-inject.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <title>Nubank</title>
@@ -283,7 +287,140 @@
       </div>
     </section>
 
+    <section class="container">
+      <div class="best px-3 py-4">
+        <div class="flex-item-auto">
+          <h5>O melhor</h5>
+          <h2>Por que Nubank?</h2>
+        </div>
+        <div class="best-item flex-item-auto">
+          <img
+            class="icon w-auto"
+            src="svg/icon-cash.svg"
+            onload="SVGInject(this)"
+            alt="#"
+          />
+          <p class="mt-2 bold">Conta que rende mais que a poupança.</p>
+        </div>
+        <div class="best-item flex-item-auto">
+          <img
+            class="icon w-auto"
+            src="svg/icon-transfer.svg"
+            onload="SVGInject(this)"
+            alt="#"
+          />
+          <p class="mt-2 bold">Transferências e TEDs ilimitadas.</p>
+        </div>
+        <div class="best-item flex-item-auto">
+          <img
+            class="icon w-auto"
+            src="svg/icon-card.svg"
+            onload="SVGInject(this)"
+            alt="#"
+          />
+          <p class="mt-2 bold">Conta e cartão 100% gratuitos.</p>
+        </div>
+        <div class="best-item flex-item-auto">
+          <img
+            class="icon w-auto"
+            src="svg/icon-phone.svg"
+            onload="SVGInject(this)"
+            alt="#"
+          />
+          <p class="mt-2 bold">O melhor suporte 24h do Brasil.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="box">
+      <h5 class="mb-1 mt-2" data-aos="fade-up" data-aos-delay="100">
+        depoimentos
+      </h5>
+      <h2 class="mb-1" data-aos="fade-up" data-aos-delay="200">
+        Todos amam o roxinho
+      </h2>
+    </section>
+    <section class="container-swiper hidden">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="photo-profile my-1 photo-1"></div>
+            <h4 class="my-1">Jorge Silva</h4>
+            <p class="my-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+              pellentesque vulputate at mattis nibh nulla est. Pharetra, eget
+              purus tortor nibh porta ipsum enim urna viverra.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="photo-profile my-1 photo-2"></div>
+            <h4 class="my-1">Anna Keller</h4>
+            <p class="my-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+              pellentesque vulputate at mattis nibh nulla est. Pharetra, eget
+              purus tortor nibh porta ipsum enim urna viverra.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="photo-profile my-1 photo-3"></div>
+            <h4 class="my-1">Gabriela Shuzz</h4>
+            <p class="my-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+              pellentesque vulputate at mattis nibh nulla est. Pharetra, eget
+              purus tortor nibh porta ipsum enim urna viverra.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="photo-profile my-1 photo-4"></div>
+            <h4 class="my-1">Lia Vieira</h4>
+            <p class="my-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+              pellentesque vulputate at mattis nibh nulla est. Pharetra, eget
+              purus tortor nibh porta ipsum enim urna viverra.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="photo-profile my-1 photo-5"></div>
+            <h4 class="my-1">Théo Gomes</h4>
+            <p class="my-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+              pellentesque vulputate at mattis nibh nulla est. Pharetra, eget
+              purus tortor nibh porta ipsum enim urna viverra.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="photo-profile my-1 photo-6"></div>
+            <h4 class="my-1">Marcela Sousa</h4>
+            <p class="my-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+              pellentesque vulputate at mattis nibh nulla est. Pharetra, eget
+              purus tortor nibh porta ipsum enim urna viverra.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-next"></div>
+      <div class="button-prev"></div>
+    </section>
+
     <script src="./js/app.js"></script>
-    <script src="./js/svg-inject.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      let swiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 40,
+        grabCursor: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          type: 'progressbar',
+        },
+        navigation: {
+          nextEl: '.button-next',
+          prevEl: '.button-prev',
+        },
+      })
+    </script>
   </body>
 </html>
