@@ -2,7 +2,6 @@
   font-family: 'Sora', sans-serif;
 
   @if $size == h1 {
-    font-size: calc(max(36px, 2.98vw));
     font-size: clamp(36px, 5.2vw, 56px);
     line-height: 100%;
   } @else if $size == h2 {
