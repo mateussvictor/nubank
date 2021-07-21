@@ -313,7 +313,6 @@
 h1 {
   color: #232224;
   font-family: 'Sora', sans-serif;
-  font-size: calc(max(36px, 2.98vw));
   font-size: clamp(36px, 5.2vw, 56px);
   line-height: 100%;
 }
