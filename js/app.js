@@ -10,49 +10,32 @@ function scrollHeader() {
 
 window.addEventListener('scroll', scrollHeader)
 
-const menuItem1 = document.getElementById('menu-item-1')
-const menuItem2 = document.getElementById('menu-item-2')
-const menuItem3 = document.getElementById('menu-item-3')
+const desktopNavLinks = document.querySelectorAll('.nav-link-desktop')
+const dropdownMenu = document.querySelectorAll('.dropdown-menu')
 
-const dropdownMenu1 = document.getElementById('dropdown-item-1')
-const dropdownMenu2 = document.getElementById('dropdown-item-2')
-const dropdownMenu3 = document.getElementById('dropdown-item-3')
+desktopNavLinks.forEach((link, index) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault()
+    showDropdown(index)
+  })
+})
 
-function showDropdown1(event) {
-  event.preventDefault()
-  dropdownMenu1.classList.toggle('active-dropdown-menu')
-  dropdownMenu2.classList.remove('active-dropdown-menu')
-  dropdownMenu3.classList.remove('active-dropdown-menu')
+dropdownMenu.forEach(item => {
+  item.addEventListener('mouseleave', () => {
+    removeDropdown(item)
+  })
+})
+
+function showDropdown(index) {
+  dropdownMenu.forEach(item => {
+    item.classList.remove('active-dropdown-menu')
+  })
+  dropdownMenu[index].classList.toggle('active-dropdown-menu')
 }
 
-function showDropdown2(event) {
-  event.preventDefault()
-  dropdownMenu2.classList.toggle('active-dropdown-menu')
-  dropdownMenu1.classList.remove('active-dropdown-menu')
-  dropdownMenu3.classList.remove('active-dropdown-menu')
+function removeDropdown(item) {
+  item.classList.remove('active-dropdown-menu')
 }
-
-function showDropdown3(event) {
-  event.preventDefault()
-  dropdownMenu3.classList.toggle('active-dropdown-menu')
-  dropdownMenu1.classList.remove('active-dropdown-menu')
-  dropdownMenu2.classList.remove('active-dropdown-menu')
-}
-
-function removeDropdown() {
-  dropdownMenu1.classList.remove('active-dropdown-menu')
-  dropdownMenu2.classList.remove('active-dropdown-menu')
-  dropdownMenu3.classList.remove('active-dropdown-menu')
-  outSideClick()
-}
-
-menuItem1.addEventListener('click', showDropdown1)
-menuItem2.addEventListener('click', showDropdown2)
-menuItem3.addEventListener('click', showDropdown3)
-
-dropdownMenu1.addEventListener('mouseleave', removeDropdown)
-dropdownMenu2.addEventListener('mouseleave', removeDropdown)
-dropdownMenu3.addEventListener('mouseleave', removeDropdown)
 
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId)
