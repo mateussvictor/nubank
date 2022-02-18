@@ -1,4 +1,4 @@
-<h1 align='center'>:mag_right: A redesign of a Nubank's website<h1>
+<h1 align='center'>:art: A redesign of a Nubank's website<h1>
 
 <br>
 
