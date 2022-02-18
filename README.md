@@ -1,15 +1,14 @@
-# nubank
+<h1 align='center'>:mag_right: A redesign of a Nubank's website<h1>
 
 <br>
 
 <p align="center">
-  <img src=".github/nubank.png" alt="Nubank Landing Page" style="width:600px; height:380px">
+  <img src=".github/nubank.png" alt="Nubank Landing Page">
 </p>
 <br>
 
 <br>
 
-<p align='center'>:mag_right: A redesign of a Nubank's website<p>
 
 # :pushpin: Table of Contents
 
