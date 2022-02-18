@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-  <img src=".github/nubank.png" alt="Nubank Landing Page" style="width:500px; height:380px">
+  <img src=".github/nubank.png" alt="Nubank Landing Page" style="width:600px; height:380px">
 </p>
 <br>
 
@@ -41,7 +41,7 @@ $ git clone https://github.com/mateussvictor/nubank.git
 # Enter the directory with
 $ cd nubank
 
-# Run the application with Live Server Extension:
+# Run the application with Live Server Extension
 
 ```
 
