@@ -1,7 +1,5 @@
 <h1 align='center'>:art: A redesign of a Nubank's website<h1>
 
-<br>
-
 <p align="center">
   <img src=".github/nubank.png" alt="Nubank Landing Page">
 </p>
